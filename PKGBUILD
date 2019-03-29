@@ -1,15 +1,15 @@
 # Maintainer: Jean Prat https://github.com/saez0pub/archlinux-scap-security-guide
 pkgname=scap-workbench
-pkgver=1.1.1
+pkgver=1.2.0
 pkgrel=1
 pkgdesc="SCAP Scanner And Tailoring Graphical User Interface"
 arch=('any')
 url="http://www.open-scap.org/tools/scap-workbench"
 license=('https://github.com/OpenSCAP/scap-workbench/blob/v1-1/COPYING')
-depends=('cmake' 'make' 'openssh')
-makedepends=('make' 'git')
+depends=('openssh' 'util-linux' 'qt5-base' 'qt5-xmlpatterns' 'openscap')
+makedepends=('cmake' 'qt5-base' 'qt5-xmlpatterns' 'openscap')
 source=("https://github.com/OpenSCAP/scap-workbench/releases/download/${pkgver}/scap-workbench-${pkgver}.tar.bz2")
-md5sums=('b13e410e5825b0762e5008f871b48f03')
+md5sums=('3c82874f02214f8a6960349ae48559a4')
 
 build() {
 	cd "$srcdir/${pkgname}-${pkgver}"
